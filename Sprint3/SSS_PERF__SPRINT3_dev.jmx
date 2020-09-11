@@ -103,7 +103,7 @@
       </CacheManager>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="load85pagedoc" enabled="true">
-        <stringProp name="filename">C:/SSS_TestPerf/85pagesencode.txt</stringProp>
+        <stringProp name="filename">U:/sss/3pageencodebase64.txt</stringProp>
         <stringProp name="fileEncoding"></stringProp>
         <stringProp name="variableNames">docpagesencodedtext</stringProp>
         <boolProp name="ignoreFirstLine">false</boolProp>
@@ -132,8 +132,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">50</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">3000</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -142,12 +142,12 @@
       <hashTree>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">3</stringProp>
+          <stringProp name="LoopController.loops">2</stringProp>
         </LoopController>
         <hashTree>
           <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
             <stringProp name="CounterConfig.start">1</stringProp>
-            <stringProp name="CounterConfig.end">100</stringProp>
+            <stringProp name="CounterConfig.end">2</stringProp>
             <stringProp name="CounterConfig.incr">1</stringProp>
             <stringProp name="CounterConfig.name">counter</stringProp>
             <stringProp name="CounterConfig.format"></stringProp>
@@ -184,12 +184,12 @@
             </elementProp>
             <elementProp name="DateCreated" elementType="Argument">
               <stringProp name="Argument.name">DateCreated</stringProp>
-              <stringProp name="Argument.value">2020-09-09T03:30:49.493Z</stringProp>
+              <stringProp name="Argument.value">2020-09-11T03:30:49.493Z</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="ScheduleDate" elementType="Argument">
               <stringProp name="Argument.name">ScheduleDate</stringProp>
-              <stringProp name="Argument.value">2020-09-09T03:30:49.493Z</stringProp>
+              <stringProp name="Argument.value">2020-09-11T03:30:49.493Z</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="OfficeID" elementType="Argument">
@@ -199,7 +199,7 @@
             </elementProp>
             <elementProp name="signeremail" elementType="Argument">
               <stringProp name="Argument.name">signeremail</stringProp>
-              <stringProp name="Argument.value">sssuser0909_S_50</stringProp>
+              <stringProp name="Argument.value">sssuser0911_Y_50</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -1106,12 +1106,12 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">86</stringProp>
+            <stringProp name="LoopController.loops">2</stringProp>
           </LoopController>
           <hashTree>
             <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
               <stringProp name="CounterConfig.start">0</stringProp>
-              <stringProp name="CounterConfig.end">86</stringProp>
+              <stringProp name="CounterConfig.end">2</stringProp>
               <stringProp name="CounterConfig.incr">1</stringProp>
               <stringProp name="CounterConfig.name">pagecounter</stringProp>
               <stringProp name="CounterConfig.format"></stringProp>
@@ -1332,12 +1332,12 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">86</stringProp>
+            <stringProp name="LoopController.loops">2</stringProp>
           </LoopController>
           <hashTree>
             <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
               <stringProp name="CounterConfig.start">0</stringProp>
-              <stringProp name="CounterConfig.end">86</stringProp>
+              <stringProp name="CounterConfig.end">2</stringProp>
               <stringProp name="CounterConfig.incr">1</stringProp>
               <stringProp name="CounterConfig.name">pagecounter1</stringProp>
               <stringProp name="CounterConfig.format"></stringProp>
@@ -1811,7 +1811,7 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">&quot;${notaryuserId}&quot;</stringProp>
+                  <stringProp name="Argument.value">&quot;${user}&quot;</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1831,53 +1831,19 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
-              <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="filename"></stringProp>
-              <stringProp name="parameters"></stringProp>
-              <stringProp name="script">
-    	var test_string = &quot;{\&quot;NotaryID\&quot;:&quot;+ vars.get(&quot;UserID&quot;)+&quot;}&quot;;
-   	log.info(&quot;****************************************************NotaryID Request &quot; +test_string);  
-    	String encoded = test_string.bytes.encodeBase64().toString();
-	def notaryidstr = new StringBuilder(encoded).reverse().toString();
-	vars.put(&quot;notaryuserId&quot;,notaryidstr);
-   	log.info(&quot;****************************************************NotaryID Request Payload &quot; +notaryidstr);  
-
-
-
-</stringProp>
-              <stringProp name="scriptLanguage">groovy</stringProp>
-            </JSR223PreProcessor>
-            <hashTree/>
             <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
-                <elementProp name="Accept" elementType="Header">
-                  <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">*/*</stringProp>
-                </elementProp>
-                <elementProp name="User-Agent" elementType="Header">
-                  <stringProp name="Header.name">User-Agent</stringProp>
-                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36</stringProp>
-                </elementProp>
-                <elementProp name="DNT" elementType="Header">
-                  <stringProp name="Header.name">DNT</stringProp>
-                  <stringProp name="Header.value">1</stringProp>
+                <elementProp name="RequestVerificationToken" elementType="Header">
+                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
+                  <stringProp name="Header.value">CfDJ8PwZ0GIvSaZJpcIjY06N-JnCdCUc3lEwYATqLX45w85TryrKwdc9DqRDf37p733rKs7IodKfZzs-3eWG60n4XpnLZ8esFpBfiXEL5tYmVM2IV256kAMnpEI8JDk4-PdcRlIyUoB2a4UO6E2xq3uWB14</stringProp>
                 </elementProp>
                 <elementProp name="Content-Type" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
                   <stringProp name="Header.value">application/json</stringProp>
                 </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Cookie</stringProp>
-                  <stringProp name="Header.value">${cookie}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                  <stringProp name="Header.value">${verificationToken}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">loginToken</stringProp>
-                  <stringProp name="Header.value">${loginToken}</stringProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
                 </elementProp>
               </collectionProp>
             </HeaderManager>
@@ -1889,7 +1855,7 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${packagekeyval}</stringProp>
+                  <stringProp name="Argument.value">&quot;${packagekeyval}&quot;</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1909,11 +1875,37 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="RequestVerificationToken" elementType="Header">
+                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
+                  <stringProp name="Header.value">${verificationToken}</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Cookie</stringProp>
+                  <stringProp name="Header.value">${cookie}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
             <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
-              <stringProp name="script">var test_string_package =&quot;{\&quot;PackageID\&quot;:${Id},\&quot;ReturnDocumentsContent\&quot;:false,\&quot;ReturnThumbnails\&quot;:false}&quot;;
+              <stringProp name="script">    	//String useremail1 = &quot;\&quot;mcuser&quot; + vars.get(&quot;iduser&quot;) + &quot;@getnada.com\&quot;&quot;;
+
+    	//{&quot;UserName&quot;:&quot;mcuser1@getnada.com&quot;,&quot;Password&quot;:&quot;Notary@12345&quot;}
+
+    //	var test_string = &quot;{\&quot;UserName\&quot;:&quot;+ useremail1 +&quot;,\&quot;&quot; +&quot;Password\&quot;:\&quot;Notary@12345\&quot;}&quot;;
+var test_string_package =&quot;{\&quot;PackageID\&quot;:${Id},\&quot;ReturnDocumentsContent\&quot;:false,\&quot;ReturnThumbnails\&quot;:false}&quot;;
 
     	log.info(test_string_package);
     	
@@ -1927,44 +1919,9 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
 
 
 
-
-
 </stringProp>
               <stringProp name="scriptLanguage">groovy</stringProp>
             </JSR223PreProcessor>
-            <hashTree/>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="Accept" elementType="Header">
-                  <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">*/*</stringProp>
-                </elementProp>
-                <elementProp name="User-Agent" elementType="Header">
-                  <stringProp name="Header.name">User-Agent</stringProp>
-                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36</stringProp>
-                </elementProp>
-                <elementProp name="DNT" elementType="Header">
-                  <stringProp name="Header.name">DNT</stringProp>
-                  <stringProp name="Header.value">1</stringProp>
-                </elementProp>
-                <elementProp name="Content-Type" elementType="Header">
-                  <stringProp name="Header.name">Content-Type</stringProp>
-                  <stringProp name="Header.value">application/json</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Cookie</stringProp>
-                  <stringProp name="Header.value">${cookie}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                  <stringProp name="Header.value">${verificationToken}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">loginToken</stringProp>
-                  <stringProp name="Header.value">${loginToken}</stringProp>
-                </elementProp>
-              </collectionProp>
-            </HeaderManager>
             <hashTree/>
           </hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/GetPackageVideosHeader" enabled="true">
@@ -1995,33 +1952,21 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
           <hashTree>
             <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
-                <elementProp name="Accept" elementType="Header">
-                  <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">*/*</stringProp>
-                </elementProp>
-                <elementProp name="User-Agent" elementType="Header">
-                  <stringProp name="Header.name">User-Agent</stringProp>
-                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36</stringProp>
-                </elementProp>
-                <elementProp name="DNT" elementType="Header">
-                  <stringProp name="Header.name">DNT</stringProp>
-                  <stringProp name="Header.value">1</stringProp>
+                <elementProp name="RequestVerificationToken" elementType="Header">
+                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
+                  <stringProp name="Header.value">${token}</stringProp>
                 </elementProp>
                 <elementProp name="Content-Type" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
                   <stringProp name="Header.value">application/json</stringProp>
                 </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Cookie</stringProp>
                   <stringProp name="Header.value">${cookie}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                  <stringProp name="Header.value">${verificationToken}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">loginToken</stringProp>
-                  <stringProp name="Header.value">${loginToken}</stringProp>
                 </elementProp>
               </collectionProp>
             </HeaderManager>
@@ -2055,33 +2000,21 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
           <hashTree>
             <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
-                <elementProp name="Accept" elementType="Header">
-                  <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">*/*</stringProp>
-                </elementProp>
-                <elementProp name="User-Agent" elementType="Header">
-                  <stringProp name="Header.name">User-Agent</stringProp>
-                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36</stringProp>
-                </elementProp>
-                <elementProp name="DNT" elementType="Header">
-                  <stringProp name="Header.name">DNT</stringProp>
-                  <stringProp name="Header.value">1</stringProp>
+                <elementProp name="RequestVerificationToken" elementType="Header">
+                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
+                  <stringProp name="Header.value">${token}</stringProp>
                 </elementProp>
                 <elementProp name="Content-Type" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
                   <stringProp name="Header.value">application/json</stringProp>
                 </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Cookie</stringProp>
                   <stringProp name="Header.value">${cookie}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                  <stringProp name="Header.value">${verificationToken}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">loginToken</stringProp>
-                  <stringProp name="Header.value">${loginToken}</stringProp>
                 </elementProp>
               </collectionProp>
             </HeaderManager>
@@ -2114,6 +2047,41 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="RequestVerificationToken" elementType="Header">
+                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
+                  <stringProp name="Header.value">${verificationToken}</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Cookie</stringProp>
+                  <stringProp name="Header.value">${cookie}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">SignersID</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.Content.SigningTable.Signers[0].ID</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">SigningTableID</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.Content.SigningTable.ID</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
             <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="false">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
               <stringProp name="RegexExtractor.refname">createsiging</stringProp>
@@ -2124,43 +2092,32 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
             </RegexExtractor>
             <hashTree/>
             <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
-              <stringProp name="JSONPostProcessor.referenceNames">SignCreateContent</stringProp>
-              <stringProp name="JSONPostProcessor.jsonPathExprs">$.Content</stringProp>
+              <stringProp name="JSONPostProcessor.referenceNames">Signers</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.Content.SigningTable.Signers</stringProp>
               <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
             </JSONPostProcessor>
             <hashTree/>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="Accept" elementType="Header">
-                  <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">*/*</stringProp>
-                </elementProp>
-                <elementProp name="User-Agent" elementType="Header">
-                  <stringProp name="Header.name">User-Agent</stringProp>
-                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36</stringProp>
-                </elementProp>
-                <elementProp name="DNT" elementType="Header">
-                  <stringProp name="Header.name">DNT</stringProp>
-                  <stringProp name="Header.value">1</stringProp>
-                </elementProp>
-                <elementProp name="Content-Type" elementType="Header">
-                  <stringProp name="Header.name">Content-Type</stringProp>
-                  <stringProp name="Header.value">application/json</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Cookie</stringProp>
-                  <stringProp name="Header.value">${cookie}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                  <stringProp name="Header.value">${verificationToken}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">loginToken</stringProp>
-                  <stringProp name="Header.value">${loginToken}</stringProp>
-                </elementProp>
-              </collectionProp>
-            </HeaderManager>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">Notaries</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.Content.SigningTable.Notaries</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">ClosingSignerID</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.Content.SigningTable.Signers[0]ClosingSignerID</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">Coordinates</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.Content.SigningTable.Signers[0].Coordinates.[1].ID</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </JSONPostProcessor>
             <hashTree/>
           </hashTree>
           <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters" enabled="false">
@@ -2175,19 +2132,23 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
             <boolProp name="UserParameters.per_iteration">false</boolProp>
           </UserParameters>
           <hashTree/>
-          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
             <boolProp name="displayJMeterProperties">false</boolProp>
             <boolProp name="displayJMeterVariables">true</boolProp>
             <boolProp name="displaySystemProperties">false</boolProp>
           </DebugSampler>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/SaveSigningTable" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/SaveSigningTable" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${SignCreateContent}</stringProp>
+                  <stringProp name="Argument.value">{&#xd;
+   &quot;SigningTableID&quot;:${SigningTableID},&#xd;
+  &quot;Signers&quot;:${Signers},&#xd;
+  &quot;Notaries&quot;:${Notaries}&#xd;
+}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -2207,7 +2168,7 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="false">
               <stringProp name="JSONPostProcessor.referenceNames">SigningTableID;ClosingSignerID; SignersID;CoordinatesID;SignerNextCoord;NotaryNextCoord;IdentificationID;NotariesID</stringProp>
               <stringProp name="JSONPostProcessor.jsonPathExprs">$.Content.SigningTable.Signers[0].SigningTableID;$.Content.SigningTable.Signers[0].ClosingSignerID; $.Content..SigningTable.Signers[0].ID;$.Content.SigningTable.Signers[0].Coordinates[0].ID; $.Content.SigningTable.Signers[0].ClosingSigner.SignerNextCoord; $.Content.SigningTable.Signers[0].ClosingSigner.NotaryNextCoord; $.Content.SigningTable.Signers[0].Identification.ID; $.Content.SigningTable.Notaries[0].ID</stringProp>
               <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
@@ -2236,13 +2197,13 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/GetSignersDocuments" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/GetSignersDocuments" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;SigningTableID&quot;:${SigningTableID}-1,&quot;ClosingSignerID&quot;:${ClosingSignerID},&quot;ViewMode&quot;:1,&quot;SigningTableSignerID&quot;:${SignersID},&quot;ClosingNotaryID&quot;:${notaryid},&quot;IpAddress&quot;:&quot;0.0.0.0&quot;,&quot;SigningTableType&quot;:0,&quot;includeAllDocuments&quot;:true}</stringProp>
+                  <stringProp name="Argument.value">{&quot;SigningTableID&quot;:${SigningTableID},&quot;ClosingSignerID&quot;:${ClosingSignerID},&quot;ViewMode&quot;:1,&quot;SigningTableSignerID&quot;:${SignersID},&quot;ClosingNotaryID&quot;:${notaryid},&quot;IpAddress&quot;:&quot;0.0.0.0&quot;,&quot;SigningTableType&quot;:0,&quot;includeAllDocuments&quot;:true}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -2266,7 +2227,7 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="RequestVerificationToken" elementType="Header">
                   <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                  <stringProp name="Header.value">${token}</stringProp>
+                  <stringProp name="Header.value">${verificationToken}</stringProp>
                 </elementProp>
                 <elementProp name="Content-Type" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
@@ -2282,6 +2243,147 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
                 </elementProp>
               </collectionProp>
             </HeaderManager>
+            <hashTree/>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="false">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">    	//String useremail1 = &quot;\&quot;mcuser&quot; + vars.get(&quot;iduser&quot;) + &quot;@getnada.com\&quot;&quot;;
+log.info(&quot;???????????????????????%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%????????&quot;);
+   
+    	//log.info(${SigningTabledata});
+    	def jsonSlurper = new JsonSlurper()
+def object = jsonSlurper.parseText(&apos;${SigningTabledata}&apos;);
+assert object instanceof Map
+
+
+    	    	log.info(&quot;?????????yyyyyyyyyyyyyyyyyyyyyy%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%????????&quot;+object.SigningTable.ID);
+    	
+    	log.info(&quot;???????????????????????%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%????????&quot;);
+
+
+
+</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/GetDocumentPage" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;ClosingDocumentID&quot;:${DocId},&quot;ClosingPackageID&quot;:${Id},&quot;Page&quot;:1,&quot;Resolution&quot;:96,&quot;ViewMode&quot;:2,&quot;ClosingSignerID&quot;:${ClosingSignerID},&quot;SigningTableSignerID&quot;:${SignersID},&quot;ClosingNotaryID&quot;:${notaryid},&quot;IpAddress&quot;:&quot;0.0.0.0&quot;,&quot;SigningTableType&quot;:0,&quot;LoadMetadata&quot;:true}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">webapp/api/Handler/GetDocumentPage</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="RequestVerificationToken" elementType="Header">
+                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
+                  <stringProp name="Header.value">${verificationToken}</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Cookie</stringProp>
+                  <stringProp name="Header.value">${cookie}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="false">
+              <stringProp name="JSONPostProcessor.referenceNames">SignID</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.Content.PdfData.Signatures.ID</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/UpdateDocumentField" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;ClosingDocumentID&quot;:${DocId},&quot;ClosingPackageID&quot;:${Id},&quot;Page&quot;:1,&quot;Resolution&quot;:96,&quot;ViewMode&quot;:1,&quot;ClosingSignerID&quot;:${ClosingSignerID},&quot;SigningTableSignerID&quot;:${SignersID},&quot;ClosingNotaryID&quot;:${notaryid},&quot;CoordinateID&quot;:${Coordinates},&quot;ReturnPage&quot;:true,&quot;ReturnThumbnail&quot;:true,&quot;IpAddress&quot;:&quot;0.0.0.0&quot;,&quot;Value&quot;:&quot;&quot;,&quot;SigningTableType&quot;:1,&quot;PostFields&quot;:{}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">webapp/api/Handler/UpdateDocumentField</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="RequestVerificationToken" elementType="Header">
+                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
+                  <stringProp name="Header.value">${verificationToken}</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Cookie</stringProp>
+                  <stringProp name="Header.value">${cookie}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="false">
+            <stringProp name="ForeachController.inputVal">Coordinates</stringProp>
+            <stringProp name="ForeachController.returnVal">Coordinate</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+          </ForeachController>
+          <hashTree>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="false">
+              <stringProp name="CounterConfig.start">0</stringProp>
+              <stringProp name="CounterConfig.end">86</stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">pagecounter</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">false</boolProp>
+            </CounterConfig>
             <hashTree/>
           </hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/GetPackageVideosHeader" enabled="false">
@@ -2332,54 +2434,6 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/UpdateDocumentField" enabled="false">
-            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;ClosingDocumentID&quot;:${DocId},&quot;ClosingPackageID&quot;:${Id},&quot;Page&quot;:0,&quot;Resolution&quot;:96,&quot;ViewMode&quot;:1,&quot;ClosingSignerID&quot;:9,&quot;SigningTableSignerID&quot;:${SignersID},&quot;ClosingNotaryID&quot;:${notaryid},&quot;CoordinateID&quot;:${CoordinatesID},&quot;ReturnPage&quot;:true,&quot;ReturnThumbnail&quot;:true,&quot;IpAddress&quot;:&quot;0.0.0.0&quot;,&quot;Value&quot;:&quot;&quot;,&quot;SigningTableType&quot;:0,&quot;PostFields&quot;:{},&quot;ClosingScheduleID&quot;:8447}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">https</stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">webapp/api/Handler/UpdateDocumentField</stringProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="RequestVerificationToken" elementType="Header">
-                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                  <stringProp name="Header.value">${token}</stringProp>
-                </elementProp>
-                <elementProp name="Content-Type" elementType="Header">
-                  <stringProp name="Header.name">Content-Type</stringProp>
-                  <stringProp name="Header.value">application/json</stringProp>
-                </elementProp>
-                <elementProp name="Accept" elementType="Header">
-                  <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">*/*</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Cookie</stringProp>
-                  <stringProp name="Header.value">${cookie}</stringProp>
-                </elementProp>
-              </collectionProp>
-            </HeaderManager>
-            <hashTree/>
-          </hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/GetDocumentThumbnailImage" enabled="false">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -2396,54 +2450,6 @@ log.info(&quot;-------------OfficeManagerID :&quot;+ vars.get(&quot;OfficeManage
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">webapp/api/Handler/GetDocumentThumbnailImage</stringProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="RequestVerificationToken" elementType="Header">
-                  <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                  <stringProp name="Header.value">${token}</stringProp>
-                </elementProp>
-                <elementProp name="Content-Type" elementType="Header">
-                  <stringProp name="Header.name">Content-Type</stringProp>
-                  <stringProp name="Header.value">application/json</stringProp>
-                </elementProp>
-                <elementProp name="Accept" elementType="Header">
-                  <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">*/*</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Cookie</stringProp>
-                  <stringProp name="Header.value">${cookie}</stringProp>
-                </elementProp>
-              </collectionProp>
-            </HeaderManager>
-            <hashTree/>
-          </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/GetDocumentPage" enabled="false">
-            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;ClosingDocumentID&quot;:${DocId},&quot;ClosingPackageID&quot;:${Id},&quot;Page&quot;:0,&quot;Resolution&quot;:96,&quot;ViewMode&quot;:2,&quot;ClosingSignerID&quot;:${ClosingSignerID},&quot;SigningTableSignerID&quot;:${SignersID},&quot;ClosingNotaryID&quot;:${notaryid},&quot;IpAddress&quot;:&quot;0.0.0.0&quot;,&quot;SigningTableType&quot;:0,&quot;LoadMetadata&quot;:true}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">https</stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">webapp/api/Handler/GetDocumentPage</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
