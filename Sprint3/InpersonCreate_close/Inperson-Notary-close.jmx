@@ -133,7 +133,7 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.num_threads">2</stringProp>
         <stringProp name="ThreadGroup.ramp_time">30</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
@@ -186,6 +186,16 @@
             <elementProp name="signeremail" elementType="Argument">
               <stringProp name="Argument.name">signeremail</stringProp>
               <stringProp name="Argument.value">sssuser${__time(MMdd)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="NoOfLoop" elementType="Argument">
+              <stringProp name="Argument.name">NoOfLoop</stringProp>
+              <stringProp name="Argument.value">29</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="NoOfCounter" elementType="Argument">
+              <stringProp name="Argument.name">NoOfCounter</stringProp>
+              <stringProp name="Argument.value">28</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -1394,7 +1404,7 @@ log.info(&quot;ConsentDate&quot; + vars.get(&quot;ConsentDate&quot;));
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="RequestVerificationToken" elementType="Header">
                   <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                  <stringProp name="Header.value">CfDJ8PwZ0GIvSaZJpcIjY06N-JkFodRNlfu0GzjTbMjG-tFsU1C354bPBWkzxX_bModsW3yJ7-BHiYZtV-BKOF56wV4eShvtFDhg0Sb5zPLd56i0ii5n8WRjDIehmd1eLATXDB5aesZ4632KabLXmbXhd8w</stringProp>
+                  <stringProp name="Header.value">${verificationToken}</stringProp>
                 </elementProp>
                 <elementProp name="Content-Type" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
@@ -1426,12 +1436,12 @@ log.info(&quot;ConsentDate&quot; + vars.get(&quot;ConsentDate&quot;));
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller signer" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">4</stringProp>
+            <stringProp name="LoopController.loops">${NoOfLoop}</stringProp>
           </LoopController>
           <hashTree>
             <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
               <stringProp name="CounterConfig.start">0</stringProp>
-              <stringProp name="CounterConfig.end">3</stringProp>
+              <stringProp name="CounterConfig.end">${NoOfCounter}</stringProp>
               <stringProp name="CounterConfig.incr">1</stringProp>
               <stringProp name="CounterConfig.name">pagecounter1</stringProp>
               <stringProp name="CounterConfig.format"></stringProp>
@@ -1478,7 +1488,7 @@ log.info(&quot;ConsentDate&quot; + vars.get(&quot;ConsentDate&quot;));
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="RequestVerificationToken" elementType="Header">
                     <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                    <stringProp name="Header.value">CfDJ8PwZ0GIvSaZJpcIjY06N-JkFodRNlfu0GzjTbMjG-tFsU1C354bPBWkzxX_bModsW3yJ7-BHiYZtV-BKOF56wV4eShvtFDhg0Sb5zPLd56i0ii5n8WRjDIehmd1eLATXDB5aesZ4632KabLXmbXhd8w</stringProp>
+                    <stringProp name="Header.value">${verificationToken}</stringProp>
                   </elementProp>
                   <elementProp name="Content-Type" elementType="Header">
                     <stringProp name="Header.name">Content-Type</stringProp>
@@ -1499,6 +1509,10 @@ log.info(&quot;ConsentDate&quot; + vars.get(&quot;ConsentDate&quot;));
                   <elementProp name="Sec-Fetch-Dest" elementType="Header">
                     <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
                     <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Cookie</stringProp>
+                    <stringProp name="Header.value">${cookie}</stringProp>
                   </elementProp>
                 </collectionProp>
               </HeaderManager>
@@ -1541,7 +1555,7 @@ log.info(&quot;ConsentDate&quot; + vars.get(&quot;ConsentDate&quot;));
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="RequestVerificationToken" elementType="Header">
                     <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                    <stringProp name="Header.value">CfDJ8PwZ0GIvSaZJpcIjY06N-JkFodRNlfu0GzjTbMjG-tFsU1C354bPBWkzxX_bModsW3yJ7-BHiYZtV-BKOF56wV4eShvtFDhg0Sb5zPLd56i0ii5n8WRjDIehmd1eLATXDB5aesZ4632KabLXmbXhd8w</stringProp>
+                    <stringProp name="Header.value">${verificationToken}</stringProp>
                   </elementProp>
                   <elementProp name="Content-Type" elementType="Header">
                     <stringProp name="Header.name">Content-Type</stringProp>
@@ -1563,6 +1577,10 @@ log.info(&quot;ConsentDate&quot; + vars.get(&quot;ConsentDate&quot;));
                     <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
                     <stringProp name="Header.value">empty</stringProp>
                   </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Cookie</stringProp>
+                    <stringProp name="Header.value">${cookie}</stringProp>
+                  </elementProp>
                 </collectionProp>
               </HeaderManager>
               <hashTree/>
@@ -1570,12 +1588,12 @@ log.info(&quot;ConsentDate&quot; + vars.get(&quot;ConsentDate&quot;));
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller notary" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">4</stringProp>
+            <stringProp name="LoopController.loops">${NoOfLoop}</stringProp>
           </LoopController>
           <hashTree>
             <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
               <stringProp name="CounterConfig.start">0</stringProp>
-              <stringProp name="CounterConfig.end">3</stringProp>
+              <stringProp name="CounterConfig.end">${NoOfCounter}</stringProp>
               <stringProp name="CounterConfig.incr">1</stringProp>
               <stringProp name="CounterConfig.name">pagecounter2</stringProp>
               <stringProp name="CounterConfig.format"></stringProp>
@@ -1618,11 +1636,18 @@ log.info(&quot;ConsentDate&quot; + vars.get(&quot;ConsentDate&quot;));
               <stringProp name="HTTPSampler.response_timeout"></stringProp>
             </HTTPSamplerProxy>
             <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Coordiante Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">SignerCoord1</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$[&apos;Content&apos;][&apos;PdfData&apos;][&apos;Signatures&apos;][0][&apos;CaptureCoordinate&apos;][&apos;ID&apos;]</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                <stringProp name="JSONPostProcessor.defaultValues">NoIDs</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
               <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="RequestVerificationToken" elementType="Header">
                     <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                    <stringProp name="Header.value">CfDJ8PwZ0GIvSaZJpcIjY06N-JkFodRNlfu0GzjTbMjG-tFsU1C354bPBWkzxX_bModsW3yJ7-BHiYZtV-BKOF56wV4eShvtFDhg0Sb5zPLd56i0ii5n8WRjDIehmd1eLATXDB5aesZ4632KabLXmbXhd8w</stringProp>
+                    <stringProp name="Header.value">${verificationToken}</stringProp>
                   </elementProp>
                   <elementProp name="Content-Type" elementType="Header">
                     <stringProp name="Header.name">Content-Type</stringProp>
@@ -1644,15 +1669,12 @@ log.info(&quot;ConsentDate&quot; + vars.get(&quot;ConsentDate&quot;));
                     <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
                     <stringProp name="Header.value">empty</stringProp>
                   </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Cookie</stringProp>
+                    <stringProp name="Header.value">${cookie}</stringProp>
+                  </elementProp>
                 </collectionProp>
               </HeaderManager>
-              <hashTree/>
-              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Coordiante Extractor" enabled="true">
-                <stringProp name="JSONPostProcessor.referenceNames">SignerCoord1</stringProp>
-                <stringProp name="JSONPostProcessor.jsonPathExprs">$[&apos;Content&apos;][&apos;PdfData&apos;][&apos;Signatures&apos;][0][&apos;CaptureCoordinate&apos;][&apos;ID&apos;]</stringProp>
-                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
-                <stringProp name="JSONPostProcessor.defaultValues">NoIDs</stringProp>
-              </JSONPostProcessor>
               <hashTree/>
             </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://perf.simplysecuresign.com/webapp/api/Handler/UpdateDocumentField" enabled="true">
@@ -1685,7 +1707,7 @@ log.info(&quot;ConsentDate&quot; + vars.get(&quot;ConsentDate&quot;));
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="RequestVerificationToken" elementType="Header">
                     <stringProp name="Header.name">RequestVerificationToken</stringProp>
-                    <stringProp name="Header.value">CfDJ8PwZ0GIvSaZJpcIjY06N-JkFodRNlfu0GzjTbMjG-tFsU1C354bPBWkzxX_bModsW3yJ7-BHiYZtV-BKOF56wV4eShvtFDhg0Sb5zPLd56i0ii5n8WRjDIehmd1eLATXDB5aesZ4632KabLXmbXhd8w</stringProp>
+                    <stringProp name="Header.value">${verificationToken}</stringProp>
                   </elementProp>
                   <elementProp name="Content-Type" elementType="Header">
                     <stringProp name="Header.name">Content-Type</stringProp>
@@ -1706,6 +1728,10 @@ log.info(&quot;ConsentDate&quot; + vars.get(&quot;ConsentDate&quot;));
                   <elementProp name="Sec-Fetch-Dest" elementType="Header">
                     <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
                     <stringProp name="Header.value">empty</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Cookie</stringProp>
+                    <stringProp name="Header.value">${cookie}</stringProp>
                   </elementProp>
                 </collectionProp>
               </HeaderManager>
